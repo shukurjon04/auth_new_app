@@ -1,0 +1,26 @@
+
+spring:
+  application:
+    name: auth_app_new
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  sql:
+    init:
+      mode: always 
+  
+  sms:
+    api:
+      email: shukurjonboqiyev0@gmail.com
+      password: IA8zO8tWxp67JcRfoWrZdfpEPCoFZjwaZGAjBsZp
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
