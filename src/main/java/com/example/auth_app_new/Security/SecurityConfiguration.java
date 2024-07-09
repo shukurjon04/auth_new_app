@@ -29,7 +29,7 @@ public class SecurityConfiguration {
     AuthService authService;
 
     private static final String[] OPEN_PASSAGE ={
-        "/api/auth",
+        "/api/auth/**",
             "/"
     };
 
@@ -42,7 +42,7 @@ public class SecurityConfiguration {
             .logout(logout -> logout.logoutUrl("/logout"))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-            .authorizeHttpRequests(auth -> auth.requestMatchers(OPEN_PASSAGE).permitAll().anyRequest().authenticated());
+            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll().anyRequest().authenticated());
         return http.build();
     }
 

@@ -27,7 +27,7 @@ public class Sms {
         final HttpPost httpPost = new HttpPost("https://notify.eskiz.uz/api/auth/login");
         final MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
         multipartEntityBuilder.addTextBody("email", this.email);
-        multipartEntityBuilder.addTextBody("email", this.password);
+        multipartEntityBuilder.addTextBody("password", this.password);
         multipartEntityBuilder.setContentType(ContentType.MULTIPART_FORM_DATA);
 
         final HttpEntity httpEntity = multipartEntityBuilder.build();

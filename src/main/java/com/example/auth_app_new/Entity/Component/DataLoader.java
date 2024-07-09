@@ -50,7 +50,7 @@ public class DataLoader implements CommandLineRunner {
 
         UserForNewsApp admin = new UserForNewsApp();
         admin.setFullName("Shukurjon");
-        admin.setPhonenumber("998912868123");
+        admin.setPhonenumber("998912868589");
         admin.setEnabled(true);
         admin.setPasword(passwordEncoder.encode("rootadmin"));
         admin.setRole(saverole);
@@ -59,7 +59,7 @@ public class DataLoader implements CommandLineRunner {
 
         UserForNewsApp user = new UserForNewsApp();
         user.setFullName("Boqijon");
-        user.setPhonenumber("998912860123");
+        user.setPhonenumber("998912860456");
         user.setEnabled(true);
         user.setPasword(passwordEncoder.encode("rootuser"));
         user.setRole(saverole);

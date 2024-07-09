@@ -47,7 +47,6 @@ public class UserForNewsApp extends AbstractEntity implements UserDetails{
     @Column(nullable=false)
     private boolean isEnabled = false;
 
-    @Column(nullable=false)
     private String verificationCOde;
 
     @ManyToOne(optional=false,fetch = FetchType.LAZY)
